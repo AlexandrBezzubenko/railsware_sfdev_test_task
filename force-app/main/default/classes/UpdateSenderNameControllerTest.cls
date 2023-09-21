@@ -15,7 +15,7 @@ private class UpdateSenderNameControllerTest {
         User user = UpdateSenderNameController.getUser(userId);
         Test.stopTest();
 
-        System.assertEquals(expectedName, user.Name);
+        Assert.areEqual(expectedName, user.Name);
     }
     
 
@@ -33,7 +33,7 @@ private class UpdateSenderNameControllerTest {
         }
         Test.stopTest();
 
-        System.assertEquals(EXPECTED_ERROR_MESSAGE, actualErrorMessage);
+        Assert.areEqual(EXPECTED_ERROR_MESSAGE, actualErrorMessage);
     }
 
     private static void insertTestUser() {
