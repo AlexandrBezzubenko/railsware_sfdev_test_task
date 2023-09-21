@@ -13,19 +13,9 @@ jest.mock('@salesforce/apex/UpdateSenderNameController.getUser',
     { virtual: true }
 );
 
-jest.mock('@salesforce/user/Id',
-    () => { return { default: jest.fn() }; },
-    { virtual: true }
-);
-
 const mockData = require('./data/mockData.json');
-
 const getTestingComponent = () => {
     return document.querySelector('c-update-sender-name');
-}
-
-function flushPromises() {
-    return new Promise((resolve) => setImmediate(resolve));
 }
 
 

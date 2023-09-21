@@ -85,7 +85,6 @@ export default class UpdateSenderName extends LightningElement {
                     this.clearInput();
                 })
                 .catch((e) => {
-                    //TODO: handle error
                     console.log(e.message);
                 })
                 .finally(() => {
@@ -114,7 +113,5 @@ export default class UpdateSenderName extends LightningElement {
             mode: 'sticky'
         });
         this.dispatchEvent(event);
-
-        console.log('tost event fired');
     }
 }
