@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Change_Email_Outgoing_Name</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <classAccesses>
         <apexClass>UpdateSenderNameController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <description>Allows access to &apos;Change Email Outgoing Name&apos; app corresponding apex class</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Change Email Sender Name</label>
 </PermissionSet>
