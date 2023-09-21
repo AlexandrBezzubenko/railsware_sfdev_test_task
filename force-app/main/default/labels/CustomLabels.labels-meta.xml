@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Current_Sender_Name</fullName>
+        <categories>update sender name app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Current Sender Name</shortDescription>
+        <value>Current Sender Name</value>
+    </labels>
+    <labels>
+        <fullName>New_Sender_Name</fullName>
+        <categories>update sender name app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Sender Name</shortDescription>
+        <value>New Sender Name</value>
+    </labels>
+    <labels>
+        <fullName>New_Sender_Name_Invalid_Message</fullName>
+        <categories>update sender name app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Sender Name Invalid Message</shortDescription>
+        <value>New Sender Name should be differ from current</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>general</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Update_SenderName_Card_Title</fullName>
+        <categories>update sender name app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Update SenderName Card Title</shortDescription>
+        <value>Change Email Sender Name</value>
+    </labels>
+</CustomLabels>

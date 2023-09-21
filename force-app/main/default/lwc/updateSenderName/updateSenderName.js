@@ -10,20 +10,30 @@ import { refreshApex } from '@salesforce/apex';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
+import CurrentSenderNameLabel from '@salesforce/label/c.Current_Sender_Name';	
+import NewSenderNameLabel from '@salesforce/label/c.New_Sender_Name';	
+import InvalidMessageLabel from '@salesforce/label/c.New_Sender_Name_Invalid_Message';	
+import CardTitleLabel from '@salesforce/label/c.Update_SenderName_Card_Title';	
+import SaveLabel from '@salesforce/label/c.Save';
+
 
 export default class UpdateSenderName extends LightningElement {
     userId;
     @track user;
     isInputInvalid = false;
-
     isLoading = true;
-
     dataToRefresh;
-
     searchKeyDebounced;
-
     doneTypingInterval = 300;
     typingTimer;
+
+    labels = {
+        CurrentSenderNameLabel,
+        NewSenderNameLabel,
+        InvalidMessageLabel,
+        CardTitleLabel,
+        SaveLabel
+    };
 
     @wire(getUser, {userId: USER_ID})
     wiredUser(result) {
@@ -58,7 +68,7 @@ export default class UpdateSenderName extends LightningElement {
     validateInput() {
         let newSenderNameInput = this.refs.newSenderName;
         if (newSenderNameInput.value === this.currentSenderName) {
-            newSenderNameInput.setCustomValidity("New Sander Name should be differ from current");
+            newSenderNameInput.setCustomValidity(this.labels.InvalidMessageLabel);
             this.isInputInvalid = true;
         } else {
             newSenderNameInput.setCustomValidity("");

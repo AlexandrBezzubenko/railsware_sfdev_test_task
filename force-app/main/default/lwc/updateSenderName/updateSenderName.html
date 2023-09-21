@@ -3,7 +3,7 @@
         <!-- Card Header -->
         <h3 slot="title">
             <lightning-icon icon-name="utility:sender_email" size="small"></lightning-icon>
-            Cahnge Email Sender Name
+            {labels.CardTitleLabel}
         </h3>
 
         <!-- Card Body -->
@@ -13,7 +13,7 @@
             </template>
             <lightning-input
                 type="text"
-                label="Current Sender Name"
+                label={labels.CurrentSenderNameLabel}
                 value={currentSenderName}
                 class="output-field"
                 disabled>
@@ -21,7 +21,7 @@
             <lightning-input
                 lwc:ref="newSenderName"
                 type="text"
-                label="New Sender Name"
+                label={labels.NewSenderNameLabel}
                 onchange={handleInputChange}
                 class="input-field">
             </lightning-input>
@@ -30,7 +30,7 @@
         <!-- Card Footer -->
         <div slot="footer">
             <lightning-button
-                label="Save"
+                label={labels.SaveLabel}
                 variant="brand"
                 class="slds-align_absolute-center save-button"
                 disabled={isSaveButtonDisabled}
