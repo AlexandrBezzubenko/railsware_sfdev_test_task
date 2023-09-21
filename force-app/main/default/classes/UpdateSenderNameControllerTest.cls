@@ -12,7 +12,6 @@ private class UpdateSenderNameControllerTest {
         final Id userId = getUserIdByName(expectedName);
 
         Test.startTest();
-        
         User user = UpdateSenderNameController.getUser(userId);
         Test.stopTest();
 
