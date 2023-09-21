@@ -1,0 +1,69 @@
+<template>
+    <lightning-card>
+        <!-- Card Header -->
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:sender_email" size="small"></lightning-icon>
+            Cahnge Email Sender Name
+        </h3>
+
+        <!-- Card Body -->
+        <div class="slds-is-relative slds-var-p-horizontal_small">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+            <lightning-input
+                type="text"
+                label="Current Sender Name"
+                value={currentSenderName}
+                class="output-field"
+                disabled>
+            </lightning-input>
+            <lightning-input
+                lwc:ref="newSenderName"
+                type="text"
+                label="New Sender Name"
+                onchange={handleInputChange}
+                class="input-field">
+            </lightning-input>
+        </div>
+
+        <!-- Card Footer -->
+        <div slot="footer">
+            <lightning-button
+                label="Save"
+                variant="brand"
+                class="slds-align_absolute-center save-button"
+                disabled={isSaveButtonDisabled}
+                onclick={handleSave}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+
+
+
+    <!-- <div class="container slds-is-relative" lwc:ref="CONTAINER">
+        <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+        <lightning-input
+            type="text"
+            label="Current Sender Name"
+            value={currentSenderName}
+            class="output-field"
+            disabled>
+        </lightning-input>
+        <lightning-input
+            lwc:ref="newSenderName"
+            type="text"
+            label="New Sender Name"
+            onchange={handleInputChange}
+            class="input-field">
+        </lightning-input>
+        <lightning-button
+            label="Save"
+            variant="brand"
+            class="slds-align_absolute-center"
+            onclick={handleSave}>
+        </lightning-button>
+    </div> -->
+</template>

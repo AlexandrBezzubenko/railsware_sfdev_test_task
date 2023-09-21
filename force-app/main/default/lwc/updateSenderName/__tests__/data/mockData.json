@@ -1,0 +1,22 @@
+{
+    "userWithEmptySenderNameMock": {
+        "Id": "somId",
+        "Name": "John Doe",
+        "SenderName": ""
+    },
+    "userWithFilledSenderNameMock": {
+        "Id": "somId",
+        "Name": "John Doe",
+        "SenderName": "John Snow"
+    },
+    "userHasNoClassPermission": {
+        "status": 500,
+        "body": {
+            "message": "You do not have access to the Apex class named 'UpdateSenderNameController'."
+        },
+        "headers": {},
+        "ok": false,
+        "statusText": "Server Error",
+        "errorType": "fetchResponse"
+    }
+}
